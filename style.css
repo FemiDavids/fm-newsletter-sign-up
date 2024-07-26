@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Regular"), url(/assets/fonts/Roboto-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Bold"), url(/assets/fonts/Roboto-Bold.ttf);
+  font-weight: 700;
+}
+
+:root {
+  --clr-accent-400: hsl(4, 100%, 67%);
+  --clr-accent-500: hsl(347, 100%, 66%);
+
+  --clr-neutral-800: hsl(234, 29%, 20%);
+  --clr-neutral-700: hsl(235, 18%, 26%);
+  --clr-neutral-200: hsl(231, 7%, 60%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --ff-base: Roboto, sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --fs-small: 1.4rem;
+  --fs-base: 1.6rem;
+  --fs-large: 3.6rem;
+}
+
+/* box-sizing model. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default margin */
+* {
+  margin: 0;
+}
+
+/* Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* remove list styles on ul, ol elements */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* general styling */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: var(--fs-base);
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  line-height: 1.5;
+
+  color: var(--clr-neutral-700);
+}
+
+.newsletter {
+}
+
+.newsletter__content {
+  padding: 2rem;
+  display: grid;
+  gap: 1.6rem;
+}
+
+.newsletter .title {
+  font-size: var(--fs-large);
+  /* font-size: var(--fw-bold); */
+}
+
+.checklist {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.checklist li {
+  display: grid;
+  grid-template-columns: 3.6rem auto;
+}
+
+.checklist li::before {
+  content: url(/assets/images/icon-list.svg);
+}
+
+input {
+  padding: 1.6rem;
+  border-radius: 0.8rem;
+  font: inherit;
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regular);
+  border: 1px solid var(--clr-neutral-200);
+}
+
+input::placeholder {
+  color: var(--clr-neutral-200);
+}
+
+.form-control {
+  display: grid;
+  gap: 0.8rem;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+}
+
+.button {
+  background: var(--clr-neutral-800);
+  color: var(--clr-neutral-100);
+  font: inherit;
+  font-weight: var(--fw-bold);
+  border: 0;
+  padding: 1.6rem;
+  border-radius: 0.8rem;
+}
